@@ -21,5 +21,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Mediscan requires camera access to take photos of patients to verify their health details</string>
 </dict>
 </plist>

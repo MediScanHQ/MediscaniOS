@@ -13,6 +13,7 @@
 		5C154D9E2B081B30000ED4C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C154D9C2B081B30000ED4C0 /* Main.storyboard */; };
 		5C154DA02B081B31000ED4C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C154D9F2B081B31000ED4C0 /* Assets.xcassets */; };
 		5C154DA32B081B31000ED4C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C154DA12B081B31000ED4C0 /* LaunchScreen.storyboard */; };
+		5C154DAB2B0823EF000ED4C0 /* UploadEMRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C154DAA2B0823EF000ED4C0 /* UploadEMRViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5C154D9F2B081B31000ED4C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C154DA22B081B31000ED4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C154DA42B081B31000ED4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C154DAA2B0823EF000ED4C0 /* UploadEMRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadEMRViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				5C154D962B081B30000ED4C0 /* AppDelegate.swift */,
 				5C154D982B081B30000ED4C0 /* SceneDelegate.swift */,
 				5C154D9A2B081B30000ED4C0 /* ViewController.swift */,
+				5C154DAA2B0823EF000ED4C0 /* UploadEMRViewController.swift */,
 				5C154D9C2B081B30000ED4C0 /* Main.storyboard */,
 				5C154D9F2B081B31000ED4C0 /* Assets.xcassets */,
 				5C154DA12B081B31000ED4C0 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C154DAB2B0823EF000ED4C0 /* UploadEMRViewController.swift in Sources */,
 				5C154D9B2B081B30000ED4C0 /* ViewController.swift in Sources */,
 				5C154D972B081B30000ED4C0 /* AppDelegate.swift in Sources */,
 				5C154D992B081B30000ED4C0 /* SceneDelegate.swift in Sources */,
@@ -302,9 +306,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mediscan.aleo.Mediscan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,9 +337,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mediscan.aleo.Mediscan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
