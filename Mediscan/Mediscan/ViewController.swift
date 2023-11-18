@@ -27,7 +27,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         picker.dismiss(animated: true, completion: nil)
         guard let image = info[.originalImage] as? UIImage else { return }
         
-//        uploadImage(image)
+        DataManager.fetchRecord(image: image)
         
     }
 }

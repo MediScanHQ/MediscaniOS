@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 class DataManager {
@@ -13,12 +14,12 @@ class DataManager {
     static let addRecordEndPoint = URL(string: "https://c40a-188-119-60-70.ngrok-free.app/api/new")
     static let getRecordEndPoint = URL(string: "https://c40a-188-119-60-70.ngrok-free.app/api/find")
     
-    func createNewRecord() {
-        
+    static func createNewRecord() {
+        // Post record
     }
     
-    func fetchRecord() {
-        
+    static func fetchRecord(image: UIImage) {
+        // Get image from API
     }
     
 }
