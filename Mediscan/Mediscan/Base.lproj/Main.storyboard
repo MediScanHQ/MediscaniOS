@@ -52,9 +52,9 @@
                                         <rect key="frame" x="8" y="156" width="374" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
-                                            <segment title="None"/>
+                                            <segment title="All"/>
                                             <segment title="ER only"/>
-                                            <segment title="CDC level"/>
+                                            <segment title="Doctor"/>
                                         </segments>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blood Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51H-gB-hiB">
@@ -64,13 +64,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UE8-dS-Lmf">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="UE8-dS-Lmf">
                                         <rect key="frame" x="8" y="238" width="374" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
-                                            <segment title="None"/>
+                                            <segment title="All"/>
                                             <segment title="ER only"/>
-                                            <segment title="CDC level"/>
+                                            <segment title="Doctor"/>
                                         </segments>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medications + Allergies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-Gu-QVG">
@@ -80,17 +80,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0Z3-wK-pjl">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="0Z3-wK-pjl">
                                         <rect key="frame" x="8" y="324" width="374" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
-                                            <segment title="None"/>
+                                            <segment title="All"/>
                                             <segment title="ER only"/>
-                                            <segment title="CDC level"/>
+                                            <segment title="Doctor"/>
                                         </segments>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azg-KP-juI">
-                                        <rect key="frame" x="156" y="406" width="78" height="35"/>
+                                        <rect key="frame" x="20" y="407" width="350" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="vaH-dN-A10"/>
+                                        </constraints>
                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Submit"/>
@@ -103,6 +106,7 @@
                                     <constraint firstItem="94D-o7-FSL" firstAttribute="leading" secondItem="Wxe-VQ-lgQ" secondAttribute="leading" constant="17" id="Pf4-4W-jLp"/>
                                     <constraint firstAttribute="trailing" secondItem="CJn-yZ-2g0" secondAttribute="trailing" constant="8" id="StU-jY-TLK"/>
                                     <constraint firstItem="94D-o7-FSL" firstAttribute="top" secondItem="CJn-yZ-2g0" secondAttribute="bottom" constant="12" id="TVC-e3-T2v"/>
+                                    <constraint firstItem="azg-KP-juI" firstAttribute="leading" secondItem="Wxe-VQ-lgQ" secondAttribute="leading" constant="20" id="h8g-Iw-FQP"/>
                                     <constraint firstItem="CJn-yZ-2g0" firstAttribute="top" secondItem="Wxe-VQ-lgQ" secondAttribute="top" constant="8" id="vKU-p9-W3B"/>
                                 </constraints>
                             </view>
@@ -119,7 +123,7 @@
                             <constraint firstItem="56H-SB-2Zr" firstAttribute="leading" secondItem="Scs-QL-Rhk" secondAttribute="leading" id="hgY-Z4-3Zj"/>
                             <constraint firstItem="Wxe-VQ-lgQ" firstAttribute="leading" secondItem="56H-SB-2Zr" secondAttribute="leading" id="r1c-Ky-8qG"/>
                             <constraint firstItem="qSp-yx-4vJ" firstAttribute="top" secondItem="Scs-QL-Rhk" secondAttribute="top" constant="18" id="sPN-Lk-95m"/>
-                            <constraint firstItem="Scs-QL-Rhk" firstAttribute="bottom" secondItem="azg-KP-juI" secondAttribute="bottom" constant="16" id="zY4-EJ-dKJ"/>
+                            <constraint firstItem="Scs-QL-Rhk" firstAttribute="bottom" secondItem="azg-KP-juI" secondAttribute="bottom" constant="6" id="zY4-EJ-dKJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload EMR" image="heart.text.square" catalog="system" id="ocO-Wg-GJ3"/>
@@ -136,18 +140,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEm-Nv-WVy">
-                                <rect key="frame" x="103" y="661" width="184" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1n7-Pi-JRP"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemIndigoColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Scan patient"/>
-                                <connections>
-                                    <action selector="takePicture:" destination="mGq-wj-7mA" eventType="touchUpInside" id="31b-Jd-2cG"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hero-Image" translatesAutoresizingMaskIntoConstraints="NO" id="frf-AN-8j6">
                                 <rect key="frame" x="0.0" y="240.66666666666663" width="390" height="271"/>
                                 <constraints>
@@ -160,6 +152,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-q4-AE1">
+                                <rect key="frame" x="16" y="174.66666666666666" width="358" height="32"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="ER only"/>
+                                    <segment title="Doctor"/>
+                                </segments>
+                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your credential as a medical professional gives you access to different tiers of data" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9px-0D-9Zw">
                                 <rect key="frame" x="16" y="107.66666666666669" width="358" height="66"/>
                                 <constraints>
@@ -169,14 +169,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-q4-AE1">
-                                <rect key="frame" x="16" y="174.66666666666666" width="358" height="32"/>
-                                <segments>
-                                    <segment title="None"/>
-                                    <segment title="ER only"/>
-                                    <segment title="CDC level"/>
-                                </segments>
-                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEm-Nv-WVy">
+                                <rect key="frame" x="20" y="673" width="350" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ZjQ-QI-Ier"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Scan patient"/>
+                                <connections>
+                                    <action selector="takePicture:" destination="mGq-wj-7mA" eventType="touchUpInside" id="31b-Jd-2cG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aZJ-gr-yca"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -189,12 +193,12 @@
                             <constraint firstItem="hGu-q4-AE1" firstAttribute="leading" secondItem="8Au-Np-UlU" secondAttribute="leading" id="9dK-6J-Duk"/>
                             <constraint firstItem="8Au-Np-UlU" firstAttribute="top" secondItem="aZJ-gr-yca" secondAttribute="top" constant="19" id="AkM-sc-LWu"/>
                             <constraint firstItem="9px-0D-9Zw" firstAttribute="leading" secondItem="8Au-Np-UlU" secondAttribute="leading" id="GQq-Nm-UfN"/>
-                            <constraint firstItem="mEm-Nv-WVy" firstAttribute="leading" secondItem="aZJ-gr-yca" secondAttribute="leading" constant="103" id="H0X-JJ-xmD"/>
+                            <constraint firstItem="mEm-Nv-WVy" firstAttribute="leading" secondItem="aZJ-gr-yca" secondAttribute="leading" constant="20" id="H0X-JJ-xmD"/>
                             <constraint firstItem="hGu-q4-AE1" firstAttribute="top" secondItem="9px-0D-9Zw" secondAttribute="bottom" constant="1" id="HOe-Be-dDy"/>
                             <constraint firstItem="hGu-q4-AE1" firstAttribute="centerX" secondItem="aZJ-gr-yca" secondAttribute="centerX" id="TmC-9u-MzB"/>
                             <constraint firstItem="9px-0D-9Zw" firstAttribute="centerX" secondItem="aZJ-gr-yca" secondAttribute="centerX" id="VBp-1j-9aB"/>
                             <constraint firstItem="frf-AN-8j6" firstAttribute="centerX" secondItem="mEm-Nv-WVy" secondAttribute="centerX" id="heb-f5-YSe"/>
-                            <constraint firstItem="aZJ-gr-yca" firstAttribute="bottom" secondItem="mEm-Nv-WVy" secondAttribute="bottom" constant="50" id="nD0-Ym-I3V"/>
+                            <constraint firstItem="aZJ-gr-yca" firstAttribute="bottom" secondItem="mEm-Nv-WVy" secondAttribute="bottom" constant="44" id="nD0-Ym-I3V"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scan" image="camera" catalog="system" id="icN-kQ-3XC"/>
