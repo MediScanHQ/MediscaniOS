@@ -14,6 +14,7 @@
 		5C154DA02B081B31000ED4C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C154D9F2B081B31000ED4C0 /* Assets.xcassets */; };
 		5C154DA32B081B31000ED4C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C154DA12B081B31000ED4C0 /* LaunchScreen.storyboard */; };
 		5C154DAB2B0823EF000ED4C0 /* UploadEMRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C154DAA2B0823EF000ED4C0 /* UploadEMRViewController.swift */; };
+		5C154DAD2B083AEF000ED4C0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C154DAC2B083AEF000ED4C0 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5C154DA22B081B31000ED4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C154DA42B081B31000ED4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C154DAA2B0823EF000ED4C0 /* UploadEMRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadEMRViewController.swift; sourceTree = "<group>"; };
+		5C154DAC2B083AEF000ED4C0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				5C154D982B081B30000ED4C0 /* SceneDelegate.swift */,
 				5C154D9A2B081B30000ED4C0 /* ViewController.swift */,
 				5C154DAA2B0823EF000ED4C0 /* UploadEMRViewController.swift */,
+				5C154DAC2B083AEF000ED4C0 /* DataManager.swift */,
 				5C154D9C2B081B30000ED4C0 /* Main.storyboard */,
 				5C154D9F2B081B31000ED4C0 /* Assets.xcassets */,
 				5C154DA12B081B31000ED4C0 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C154DAB2B0823EF000ED4C0 /* UploadEMRViewController.swift in Sources */,
+				5C154DAD2B083AEF000ED4C0 /* DataManager.swift in Sources */,
 				5C154D9B2B081B30000ED4C0 /* ViewController.swift in Sources */,
 				5C154D972B081B30000ED4C0 /* AppDelegate.swift in Sources */,
 				5C154D992B081B30000ED4C0 /* SceneDelegate.swift in Sources */,
