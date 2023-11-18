@@ -30,6 +30,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         DataManager.fetchRecord(image: image)
         
     }
+    
+    @IBAction func loadEMR(_ sender: Any) {
+        
+        print("Open EMR")
+        
+        
+    }
+    
+    
+    
+    
 }
 
 

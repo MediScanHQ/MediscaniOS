@@ -22,12 +22,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="healthcare" translatesAutoresizingMaskIntoConstraints="NO" id="56H-SB-2Zr">
-                                <rect key="frame" x="0.0" y="114" width="390" height="190"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="190" id="AMY-5e-3rL"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxe-VQ-lgQ">
                                 <rect key="frame" x="0.0" y="304" width="390" height="457"/>
                                 <subviews>
@@ -110,27 +104,106 @@
                                     <constraint firstItem="CJn-yZ-2g0" firstAttribute="top" secondItem="Wxe-VQ-lgQ" secondAttribute="top" constant="8" id="vKU-p9-W3B"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="healthcare" translatesAutoresizingMaskIntoConstraints="NO" id="56H-SB-2Zr">
+                                <rect key="frame" x="0.0" y="114" width="390" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="AMY-5e-3rL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXj-co-7Oe">
+                                <rect key="frame" x="300" y="57" width="70" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="7lJ-he-IlO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="loadEMR:" destination="c68-Vt-wqw" eventType="touchUpInside" id="9Db-n1-ixz"/>
+                                    <segue destination="DHR-oy-gnQ" kind="popoverPresentation" popoverAnchorView="BXj-co-7Oe" id="fhC-cg-iFa">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vitalik" translatesAutoresizingMaskIntoConstraints="NO" id="d8e-aC-4UN">
+                                <rect key="frame" x="320" y="57" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d8e-aC-4UN" secondAttribute="height" multiplier="1:1" id="9YB-YV-zSK"/>
+                                    <constraint firstAttribute="width" constant="50" id="ebR-mr-Zbj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Scs-QL-Rhk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="BXj-co-7Oe" firstAttribute="leading" secondItem="d8e-aC-4UN" secondAttribute="leading" constant="-20" id="8g3-VO-uBp"/>
                             <constraint firstItem="Scs-QL-Rhk" firstAttribute="bottom" secondItem="Wxe-VQ-lgQ" secondAttribute="bottom" id="9jd-20-sUn"/>
                             <constraint firstItem="Wxe-VQ-lgQ" firstAttribute="trailing" secondItem="56H-SB-2Zr" secondAttribute="trailing" id="BBX-ha-D9A"/>
+                            <constraint firstItem="BXj-co-7Oe" firstAttribute="top" secondItem="d8e-aC-4UN" secondAttribute="top" id="DjQ-ka-lad"/>
                             <constraint firstItem="Scs-QL-Rhk" firstAttribute="trailing" secondItem="56H-SB-2Zr" secondAttribute="trailing" id="GnK-M3-C8Y"/>
                             <constraint firstItem="Wxe-VQ-lgQ" firstAttribute="top" secondItem="56H-SB-2Zr" secondAttribute="bottom" id="Ond-LM-Asa"/>
+                            <constraint firstItem="BXj-co-7Oe" firstAttribute="width" secondItem="d8e-aC-4UN" secondAttribute="width" constant="20" id="PtV-3A-9ph"/>
                             <constraint firstItem="qSp-yx-4vJ" firstAttribute="leading" secondItem="Scs-QL-Rhk" secondAttribute="leading" constant="23" id="XGX-yw-wtx"/>
+                            <constraint firstItem="d8e-aC-4UN" firstAttribute="centerY" secondItem="qSp-yx-4vJ" secondAttribute="centerY" id="dLk-YS-8hp"/>
                             <constraint firstItem="56H-SB-2Zr" firstAttribute="top" secondItem="qSp-yx-4vJ" secondAttribute="bottom" constant="15" id="fYc-cF-MXn"/>
                             <constraint firstItem="56H-SB-2Zr" firstAttribute="leading" secondItem="Scs-QL-Rhk" secondAttribute="leading" id="hgY-Z4-3Zj"/>
                             <constraint firstItem="Wxe-VQ-lgQ" firstAttribute="leading" secondItem="56H-SB-2Zr" secondAttribute="leading" id="r1c-Ky-8qG"/>
                             <constraint firstItem="qSp-yx-4vJ" firstAttribute="top" secondItem="Scs-QL-Rhk" secondAttribute="top" constant="18" id="sPN-Lk-95m"/>
+                            <constraint firstItem="Scs-QL-Rhk" firstAttribute="trailing" secondItem="d8e-aC-4UN" secondAttribute="trailing" constant="20" id="wsN-5V-YId"/>
                             <constraint firstItem="Scs-QL-Rhk" firstAttribute="bottom" secondItem="azg-KP-juI" secondAttribute="bottom" constant="6" id="zY4-EJ-dKJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload EMR" image="heart.text.square" catalog="system" id="ocO-Wg-GJ3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bm1-JA-ugY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="c68-Vt-wqw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1547.6923076923076" y="130.80568720379145"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QFB-iG-p53">
+            <objects>
+                <viewController id="DHR-oy-gnQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1WU-F6-dlU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vitalik" translatesAutoresizingMaskIntoConstraints="NO" id="ZaL-2S-E1z">
+                                <rect key="frame" x="120" y="72" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="DyS-b4-bdA"/>
+                                    <constraint firstAttribute="width" secondItem="ZaL-2S-E1z" secondAttribute="height" multiplier="1:1" id="UXA-Mh-VmL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="75"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitalik.eth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aX9-AR-qYi">
+                                <rect key="frame" x="149" y="244" width="92" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rKx-y5-OYb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aX9-AR-qYi" firstAttribute="top" secondItem="ZaL-2S-E1z" secondAttribute="bottom" constant="22" id="0EM-uQ-imx"/>
+                            <constraint firstItem="aX9-AR-qYi" firstAttribute="centerX" secondItem="rKx-y5-OYb" secondAttribute="centerX" id="2NC-78-cDd"/>
+                            <constraint firstItem="ZaL-2S-E1z" firstAttribute="top" secondItem="rKx-y5-OYb" secondAttribute="top" constant="72" id="GqN-Lb-sYi"/>
+                            <constraint firstItem="ZaL-2S-E1z" firstAttribute="centerX" secondItem="rKx-y5-OYb" secondAttribute="centerX" id="tA0-H2-xis"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xh-Ci-aG0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2287.6923076923076" y="150.71090047393363"/>
         </scene>
         <!--Scan-->
         <scene sceneID="Umt-rc-Fwm">
@@ -232,6 +305,7 @@
         <image name="camera" catalog="system" width="128" height="93"/>
         <image name="healthcare" width="1032" height="542"/>
         <image name="heart.text.square" catalog="system" width="128" height="114"/>
+        <image name="vitalik" width="378" height="378"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
