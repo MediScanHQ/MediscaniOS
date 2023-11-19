@@ -11,6 +11,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var profilePickerController: UISegmentedControl!
     let imagePicker = UIImagePickerController()
+    var shouldCheckForImage = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,6 +94,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     image.image = UIImage.init(named: "jonDoe")
                 case 1:
                     textview.text = DataManager.fetchData
+                case 2:
+                    if shouldCheckForImage {
+                        textview.text = ""
+                        label.text = "N/A"
+                        image.image = UIImage.init(named: "jonDoe")
+                    } else {
+                        shouldCheckForImage = true
+                    }
                 default:
                     break
                 }
