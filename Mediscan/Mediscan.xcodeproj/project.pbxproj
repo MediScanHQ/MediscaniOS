@@ -15,6 +15,7 @@
 		5C154DA32B081B31000ED4C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C154DA12B081B31000ED4C0 /* LaunchScreen.storyboard */; };
 		5C154DAB2B0823EF000ED4C0 /* UploadEMRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C154DAA2B0823EF000ED4C0 /* UploadEMRViewController.swift */; };
 		5C154DAD2B083AEF000ED4C0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C154DAC2B083AEF000ED4C0 /* DataManager.swift */; };
+		5C154DB12B0986D3000ED4C0 /* EMR.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C154DB02B0986D3000ED4C0 /* EMR.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5C154DA42B081B31000ED4C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C154DAA2B0823EF000ED4C0 /* UploadEMRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadEMRViewController.swift; sourceTree = "<group>"; };
 		5C154DAC2B083AEF000ED4C0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		5C154DB02B0986D3000ED4C0 /* EMR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EMR.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,8 @@
 		5C154D952B081B30000ED4C0 /* Mediscan */ = {
 			isa = PBXGroup;
 			children = (
+				5C154DAF2B0986A3000ED4C0 /* Modules */,
+				5C154DAE2B098696000ED4C0 /* Dependencies */,
 				5C154D962B081B30000ED4C0 /* AppDelegate.swift */,
 				5C154D982B081B30000ED4C0 /* SceneDelegate.swift */,
 				5C154D9A2B081B30000ED4C0 /* ViewController.swift */,
@@ -71,6 +75,21 @@
 				5C154DA42B081B31000ED4C0 /* Info.plist */,
 			);
 			path = Mediscan;
+			sourceTree = "<group>";
+		};
+		5C154DAE2B098696000ED4C0 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		5C154DAF2B0986A3000ED4C0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5C154DB02B0986D3000ED4C0 /* EMR.json */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C154DB12B0986D3000ED4C0 /* EMR.json in Resources */,
 				5C154DA32B081B31000ED4C0 /* LaunchScreen.storyboard in Resources */,
 				5C154DA02B081B31000ED4C0 /* Assets.xcassets in Resources */,
 				5C154D9E2B081B30000ED4C0 /* Main.storyboard in Resources */,

@@ -1,0 +1,33 @@
+
+{
+    "id": "458fb390-2f32-48f0",
+    "name": "Vitalik.eth",
+    "dateStamp": "2023-11-18T00:59:40.978631",
+    "diagnoses": [
+        {
+            "conditionName": "Condition A",
+            "dateDiagnosed": "2022-05-01T00:00:00",
+            "severity": "High"
+        },
+        {
+            "conditionName": "Condition B",
+            "dateDiagnosed": "2021-11-15T00:00:00",
+            "severity": "Low"
+        }
+    ],
+    "medications": [
+        {
+            "name": "Medication 1",
+            "datePrescribed": "2022-06-20T00:00:00",
+            "dosingSchedule": "Once a day"
+        },
+        {
+            "name": "Medication 2",
+            "datePrescribed": "2022-04-10T00:00:00",
+            "dosingSchedule": "Twice a day"
+        }
+    ],
+    "dateOfBirth": "1985-03-22T00:00:00",
+    "gender": "Male",
+    "ethnicity": "Asian"
+}

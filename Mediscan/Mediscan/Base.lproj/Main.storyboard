@@ -11,7 +11,7 @@
         <!--Upload EMR-->
         <scene sceneID="pvk-mr-oIQ">
             <objects>
-                <viewController id="YHF-CB-ERl" sceneMemberID="viewController">
+                <viewController id="YHF-CB-ERl" customClass="UploadEMRViewController" customModule="Mediscan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lMt-pQ-esV">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,71 +36,84 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergency contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94D-o7-FSL">
-                                        <rect key="frame" x="17" y="127" width="154.66666666666666" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94D-o7-FSL">
+                                        <rect key="frame" x="16.999999999999993" y="127" width="100.33333333333331" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sRb-GU-xWO">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sRb-GU-xWO">
                                         <rect key="frame" x="8" y="156" width="374" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
                                             <segment title="All"/>
                                             <segment title="ER only"/>
                                             <segment title="Doctor"/>
                                         </segments>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blood Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51H-gB-hiB">
-                                        <rect key="frame" x="17" y="209" width="99" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="UE8-dS-Lmf">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="UE8-dS-Lmf">
                                         <rect key="frame" x="8" y="238" width="374" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
                                             <segment title="All"/>
                                             <segment title="ER only"/>
                                             <segment title="Doctor"/>
                                         </segments>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medications + Allergies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-Gu-QVG">
-                                        <rect key="frame" x="17" y="295" width="186" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="0Z3-wK-pjl">
+                                        <rect key="frame" x="8" y="324" width="374" height="32"/>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="ER only"/>
+                                            <segment title="Doctor"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergency Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51H-gB-hiB">
+                                        <rect key="frame" x="17" y="209" width="149" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="0Z3-wK-pjl">
-                                        <rect key="frame" x="8" y="324" width="374" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <segments>
-                                            <segment title="All"/>
-                                            <segment title="ER only"/>
-                                            <segment title="Doctor"/>
-                                        </segments>
-                                    </segmentedControl>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azg-KP-juI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detailed medical report" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-Gu-QVG">
+                                        <rect key="frame" x="17" y="295" width="186" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azg-KP-juI">
                                         <rect key="frame" x="20" y="407" width="350" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="vaH-dN-A10"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                        <connections>
+                                            <action selector="submitPreferences:" destination="YHF-CB-ERl" eventType="touchUpInside" id="43l-v4-ZBi"/>
+                                            <action selector="submitPreferences:" destination="c68-Vt-wqw" eventType="touchUpInside" id="CHr-ik-mrY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="sRb-GU-xWO" firstAttribute="leading" secondItem="Wxe-VQ-lgQ" secondAttribute="leading" constant="8" id="0g3-10-8E9"/>
+                                    <constraint firstItem="UE8-dS-Lmf" firstAttribute="top" secondItem="51H-gB-hiB" secondAttribute="bottom" constant="8" symbolic="YES" id="2d5-4e-maB"/>
                                     <constraint firstItem="azg-KP-juI" firstAttribute="centerX" secondItem="Wxe-VQ-lgQ" secondAttribute="centerX" id="5ac-2I-Hwo"/>
                                     <constraint firstItem="CJn-yZ-2g0" firstAttribute="leading" secondItem="Wxe-VQ-lgQ" secondAttribute="leading" constant="8" id="6iI-YU-OKA"/>
+                                    <constraint firstItem="51H-gB-hiB" firstAttribute="top" secondItem="sRb-GU-xWO" secondAttribute="bottom" constant="22" id="B4S-Z2-W0O"/>
+                                    <constraint firstItem="sRb-GU-xWO" firstAttribute="centerX" secondItem="Wxe-VQ-lgQ" secondAttribute="centerX" id="L7j-gT-oHy"/>
+                                    <constraint firstItem="iOp-Gu-QVG" firstAttribute="top" secondItem="UE8-dS-Lmf" secondAttribute="bottom" constant="26" id="Lty-fP-2HE"/>
+                                    <constraint firstItem="51H-gB-hiB" firstAttribute="leading" secondItem="94D-o7-FSL" secondAttribute="leading" id="MGh-eF-m8f"/>
+                                    <constraint firstItem="0Z3-wK-pjl" firstAttribute="top" secondItem="iOp-Gu-QVG" secondAttribute="bottom" constant="8" symbolic="YES" id="Mtl-XU-M0x"/>
+                                    <constraint firstItem="sRb-GU-xWO" firstAttribute="top" secondItem="94D-o7-FSL" secondAttribute="bottom" constant="8" symbolic="YES" id="NTW-Kk-vNL"/>
                                     <constraint firstItem="94D-o7-FSL" firstAttribute="leading" secondItem="Wxe-VQ-lgQ" secondAttribute="leading" constant="17" id="Pf4-4W-jLp"/>
+                                    <constraint firstItem="UE8-dS-Lmf" firstAttribute="trailing" secondItem="sRb-GU-xWO" secondAttribute="trailing" id="RbE-d3-LuV"/>
                                     <constraint firstAttribute="trailing" secondItem="CJn-yZ-2g0" secondAttribute="trailing" constant="8" id="StU-jY-TLK"/>
                                     <constraint firstItem="94D-o7-FSL" firstAttribute="top" secondItem="CJn-yZ-2g0" secondAttribute="bottom" constant="12" id="TVC-e3-T2v"/>
+                                    <constraint firstItem="iOp-Gu-QVG" firstAttribute="leading" secondItem="51H-gB-hiB" secondAttribute="leading" id="fUY-u8-blI"/>
                                     <constraint firstItem="azg-KP-juI" firstAttribute="leading" secondItem="Wxe-VQ-lgQ" secondAttribute="leading" constant="20" id="h8g-Iw-FQP"/>
+                                    <constraint firstItem="0Z3-wK-pjl" firstAttribute="leading" secondItem="UE8-dS-Lmf" secondAttribute="leading" id="hl8-Cl-ZzJ"/>
+                                    <constraint firstItem="0Z3-wK-pjl" firstAttribute="trailing" secondItem="UE8-dS-Lmf" secondAttribute="trailing" id="jT8-DL-p3X"/>
+                                    <constraint firstItem="UE8-dS-Lmf" firstAttribute="leading" secondItem="sRb-GU-xWO" secondAttribute="leading" id="pp6-ih-hSs"/>
                                     <constraint firstItem="CJn-yZ-2g0" firstAttribute="top" secondItem="Wxe-VQ-lgQ" secondAttribute="top" constant="8" id="vKU-p9-W3B"/>
                                 </constraints>
                             </view>
@@ -118,7 +131,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
-                                    <action selector="loadEMR:" destination="c68-Vt-wqw" eventType="touchUpInside" id="9Db-n1-ixz"/>
                                     <segue destination="DHR-oy-gnQ" kind="popoverPresentation" popoverAnchorView="BXj-co-7Oe" id="fhC-cg-iFa">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
@@ -162,7 +174,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bm1-JA-ugY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="c68-Vt-wqw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1547.6923076923076" y="130.80568720379145"/>
+            <point key="canvasLocation" x="1361.5384615384614" y="131.51658767772511"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QFB-iG-p53">
@@ -173,7 +185,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vitalik" translatesAutoresizingMaskIntoConstraints="NO" id="ZaL-2S-E1z">
-                                <rect key="frame" x="120" y="72" width="150" height="150"/>
+                                <rect key="frame" x="120" y="50" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="DyS-b4-bdA"/>
                                     <constraint firstAttribute="width" secondItem="ZaL-2S-E1z" secondAttribute="height" multiplier="1:1" id="UXA-Mh-VmL"/>
@@ -185,25 +197,69 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitalik.eth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aX9-AR-qYi">
-                                <rect key="frame" x="149" y="244" width="92" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <rect key="frame" x="145.33333333333334" y="222" width="99.666666666666657" height="25.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnn-GL-pJY">
+                                <rect key="frame" x="30" y="262.33333333333331" width="330" height="551.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">ID: 458fb390-2f32-48f0
+Name: Vitalik.eth
+Date of Birth: 1985-03-22
+Gender: Male
+Ethnicity: Asian
+Emergency contact: SBF
+Phone: +420 420 420
+
+Diagnoses:
+- Condition A
+  Date Diagnosed: 2022-05-01
+  Severity: High
+- Condition B
+  Date Diagnosed: 2021-11-15
+  Severity: Low
+
+Medications:
+- Medication 1
+  Date Prescribed: 2022-06-20
+  Dosing Schedule: Once a day
+- Medication 2
+  Date Prescribed: 2022-04-10
+  Dosing Schedule: Twice a day</string>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcU-Am-hdU" userLabel="SpacerView">
+                                <rect key="frame" x="75" y="253.33333333333334" width="240" height="1"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="liG-Nc-WDL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rKx-y5-OYb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aX9-AR-qYi" firstAttribute="top" secondItem="ZaL-2S-E1z" secondAttribute="bottom" constant="22" id="0EM-uQ-imx"/>
                             <constraint firstItem="aX9-AR-qYi" firstAttribute="centerX" secondItem="rKx-y5-OYb" secondAttribute="centerX" id="2NC-78-cDd"/>
-                            <constraint firstItem="ZaL-2S-E1z" firstAttribute="top" secondItem="rKx-y5-OYb" secondAttribute="top" constant="72" id="GqN-Lb-sYi"/>
+                            <constraint firstItem="Xnn-GL-pJY" firstAttribute="top" secondItem="aX9-AR-qYi" secondAttribute="bottom" constant="15" id="3hf-yh-CFI"/>
+                            <constraint firstItem="ZaL-2S-E1z" firstAttribute="top" secondItem="rKx-y5-OYb" secondAttribute="top" constant="50" id="GqN-Lb-sYi"/>
+                            <constraint firstItem="Xnn-GL-pJY" firstAttribute="leading" secondItem="rKx-y5-OYb" secondAttribute="leading" constant="30" id="NPe-Cr-ROP"/>
+                            <constraint firstItem="Xnn-GL-pJY" firstAttribute="centerX" secondItem="rKx-y5-OYb" secondAttribute="centerX" id="Ozv-JH-UQe"/>
+                            <constraint firstItem="UcU-Am-hdU" firstAttribute="top" secondItem="aX9-AR-qYi" secondAttribute="bottom" constant="6" id="Xtl-vd-ype"/>
+                            <constraint firstItem="UcU-Am-hdU" firstAttribute="leading" secondItem="rKx-y5-OYb" secondAttribute="leading" constant="75" id="awg-k8-OLa"/>
+                            <constraint firstItem="UcU-Am-hdU" firstAttribute="centerX" secondItem="rKx-y5-OYb" secondAttribute="centerX" id="qbN-jS-hH4"/>
                             <constraint firstItem="ZaL-2S-E1z" firstAttribute="centerX" secondItem="rKx-y5-OYb" secondAttribute="centerX" id="tA0-H2-xis"/>
+                            <constraint firstItem="rKx-y5-OYb" firstAttribute="bottom" secondItem="Xnn-GL-pJY" secondAttribute="bottom" constant="20" id="wCU-7s-uxq"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xh-Ci-aG0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2287.6923076923076" y="150.71090047393363"/>
+            <point key="canvasLocation" x="2914" y="228"/>
         </scene>
         <!--Scan-->
         <scene sceneID="Umt-rc-Fwm">
@@ -228,7 +284,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-q4-AE1">
                                 <rect key="frame" x="16" y="174.66666666666666" width="358" height="32"/>
                                 <segments>
-                                    <segment title="All"/>
+                                    <segment title="Random"/>
                                     <segment title="ER only"/>
                                     <segment title="Doctor"/>
                                 </segments>
@@ -242,8 +298,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEm-Nv-WVy">
-                                <rect key="frame" x="20" y="673" width="350" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEm-Nv-WVy">
+                                <rect key="frame" x="20" y="712" width="350" height="44"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ZjQ-QI-Ier"/>
                                 </constraints>
@@ -271,10 +328,16 @@
                             <constraint firstItem="hGu-q4-AE1" firstAttribute="centerX" secondItem="aZJ-gr-yca" secondAttribute="centerX" id="TmC-9u-MzB"/>
                             <constraint firstItem="9px-0D-9Zw" firstAttribute="centerX" secondItem="aZJ-gr-yca" secondAttribute="centerX" id="VBp-1j-9aB"/>
                             <constraint firstItem="frf-AN-8j6" firstAttribute="centerX" secondItem="mEm-Nv-WVy" secondAttribute="centerX" id="heb-f5-YSe"/>
-                            <constraint firstItem="aZJ-gr-yca" firstAttribute="bottom" secondItem="mEm-Nv-WVy" secondAttribute="bottom" constant="44" id="nD0-Ym-I3V"/>
+                            <constraint firstItem="aZJ-gr-yca" firstAttribute="bottom" secondItem="mEm-Nv-WVy" secondAttribute="bottom" constant="5" id="nD0-Ym-I3V"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scan" image="camera" catalog="system" id="icN-kQ-3XC"/>
+                    <connections>
+                        <outlet property="profilePickerController" destination="hGu-q4-AE1" id="QwM-1X-o9h"/>
+                        <segue destination="DHR-oy-gnQ" kind="popoverPresentation" identifier="showResults" popoverAnchorView="jdj-7b-P9J" id="Maa-mr-y3k">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1R-EC-mSF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -300,6 +363,9 @@
             <point key="canvasLocation" x="589" y="-276"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fhC-cg-iFa"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Hero-Image" width="1494" height="1101"/>
         <image name="camera" catalog="system" width="128" height="93"/>
